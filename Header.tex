@@ -25,8 +25,16 @@
 %Kopf- und Fußzeilendefinition:
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{Kapitel: \leftmark}
-\rfoot{Seite \thepage}
+\newcommand{\topicolor}{white}
+\lhead{ \strut\rlap{\color{\topicolor}\rule[-\dp\strutbox]{\headwidth}{\headheight}}%
+  \leftmark}
+\rfoot{\thepage}
+% footer background should also be \topicolor. We have to do a bit of nasty stuff here.
+\let\oldlfoot\lfoot
+\renewcommand{\lfoot}[1]{\oldlfoot{ \strut\rlap{\color{\topicolor}\rule[-\dp\strutbox]{\headwidth}{\headheight}}%
+  #1}}
+% no header separation line
+\renewcommand{\headrule}{}
 
 %Itemize-Umgebung:
 \setitemize{leftmargin=8.5pt, itemsep=0pt} 
