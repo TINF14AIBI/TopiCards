@@ -27,8 +27,9 @@
 \fancyhf{}
 \newcommand{\topicolor}{white}
 
+\newcommand{\topicategory}{}
 \lhead{ \strut\rlap{\color{\topicolor}\rule[-\dp\strutbox]{\headwidth}{\headheight}}%
-  \nouppercase{\textsc{\leftmark}}}
+  \nouppercase{\textsc{\topicategory}}}
 \rfoot{\nouppercase{\textsc{\thepage}}}
 % footer background should also be \topicolor. We have to do a bit of nasty stuff here.
 \let\oldlfoot\lfoot
