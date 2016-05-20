@@ -1,7 +1,7 @@
 \begin{multicols}{3}[\section{ZigBee}]
 
-\rhead{Autor: Lucas Heuser}
-\lfoot{Letzte Bearbeitung: 15.04.2016}
+\rhead{Lucas Heuser, Simon Retzmann}
+\lfoot{16.05.2016}
 
 \newrefsegment
 
@@ -9,15 +9,12 @@
 \begin{tabular}{p{2,1 cm}p{2.7 cm}}
 \textbf{Steckbrief}& \\
 \end{tabular}
-\begin{tabular}{p{2,1 cm}|p{2.7 cm}}
+\rowcolors{1}{\topicolor!20}{}
+\begin{tabular}{p{2,1 cm}p{2.7 cm}}
       Einsatz seit & 2004\\
-      \hline
       Frequenz"-bereich  & \SI{2,4}{\giga\hertz} (weltweit), \SI{868}{\mega\hertz} (Europa), \SI{915}{\mega\hertz} (USA)  \\				
-      \hline
       Datenrate & \SI{20}{kbit/s} - \SI{250}{kbit/s}\\
-      \hline
       Verbreitung & Weltweit, ZigBee-Allianz\\
-      \hline
       Reichweite & \SI{10}{\metre} - \SI{75}{\metre}\\
 \end{tabular}
 \end{boxedminipage}
@@ -71,8 +68,8 @@ Das ZED dient hierbei als, für den Benutzer direkt ersichtliches Gerät innerha
 
 \subsection*{Einsatz}
 Die Netzwerkspezifikation ZigBee findet vor allem im Bereich der Hausautomation Verwendung. Hier dient die Technologie dazu, verschiedene Systeme innerhalb eines Heimnetzwerkes miteinander zu koppeln und so untereinander kommunizieren zu lassen. Der Zugriff auf das interne Netzwerk soll ebenso von außerhalb ermöglicht werden. 
-\par Die Vernetzung der einzelnen Geräte dient dazu, diese entweder automatisiert oder manuell ansprechen und steuern zu können. Ein Anwendungsfall hierfür wäre beispielsweise das Einschalten von Licht oder einem elektrischen Heizkörper per mobiler Applikation. Es ist ebenso möglich diverse Geräte innerhalb eines ZigBee Netzwerkes miteinander kommunizieren zu lassen und so einzelne Aufgaben verschiedener Geräte aufeinander abzustimmen. Dies ermöglicht, dass ein Auslösen eines Ereignis an einem einzelnen Gerät weitere Aktion anderer Geräten triggern kann. Eine denkbare Einsatzmöglichkeit wäre hier beispielsweise das Starten der Kaffemaschine, nachdem der Alarm des Weckers ausgelöst wurde.  
-\par Ein weiteres Anwendungsgebiet der Spezifikation ist im Industriellen Bereich zu finden. Hier wird der ZigBee Standard im Bereich der Maschinenautomatisierung eingesetzt und dient dazu, bestimmte Daten auszulesen und zu übermitteln. So hilft ZigBee beispielsweise bei der Güterüberwachung, der Steuerung einzelner Anlagenelemente oder dem Übermitteln von Sensordaten an die nächste Produktionseinheit.~\cite{zigbee.10}
+\par Die Vernetzung der einzelnen Geräte dient dazu, diese entweder automatisiert oder manuell ansprechen und steuern zu können. Ein Anwendungsfall hierfür wäre beispielsweise das Einschalten von Licht oder einem elektrischen Heizkörper per mobiler Applikation. Es ist ebenso möglich diverse Geräte innerhalb eines ZigBee Netzwerkes miteinander kommunizieren zu lassen und so einzelne Aufgaben verschiedener Geräte aufeinander abzustimmen. Dies ermöglicht, dass ein Auslösen eines Ereignis an einem einzelnen Gerät weitere Aktion anderer Geräten triggern kann. Eine denkbare Einsatzmöglichkeit wäre hier beispielsweise das Starten der Kaffeemaschine, nachdem der Alarm des Weckers ausgelöst wurde.  
+\par Ein weiteres Anwendungsgebiet der Spezifikation ist im industriellen Bereich zu finden. Hier wird der ZigBee Standard im Bereich der Maschinenautomatisierung eingesetzt und dient dazu, bestimmte Daten auszulesen und zu übermitteln. So hilft ZigBee beispielsweise bei der Güterüberwachung, der Steuerung einzelner Anlagenelemente oder dem Übermitteln von Sensordaten an die nächste Produktionseinheit.~\cite{zigbee.10}
 
 \subsection*{Anbieter und Gremien}
 Gründer und offizieller Entwickler der ZigBee Spezifikation ist die sogenannte ZigBee-Allianz. Dieses Gremium ist ein globaler Zusammenschluss von Firmen, über Universitäten bis hin zu Einzelpersonen. Die einzelnen Mitglieder der Allianz sind unterteilt in die Kategorien Adopter, Participant und Promoter.
@@ -84,22 +81,15 @@ Gründer und offizieller Entwickler der ZigBee Spezifikation ist die sogenannte 
 \includegraphics[width=\textwidth]{Kapitel/ZigBee/Grafiken/Zeitstrahl}
 \par
 \noindent
-\begin{tabular}{|p{1 cm}|p{3 cm}|p{13.55 cm}|}
-	\hline
+\rowcolors{2}{}{\topicolor!20}
+\begin{tabular}{p{1 cm}p{3 cm}p{13.55 cm}}
 	Nummer & Datum & Entwicklungsschritte~\cite{zigbee.5}\\
-	\hline
 	1 & 1998 & Beginn der Entwicklung eines neuen Standards für kabellose Kommunikation zwischen Endgeräten mit geringen Datenraten.\\
-	\hline
 	2 & 2002 & Gründung der ZigBee-Allianz.\\
-	\hline
 	3 & 2004 & Veröffentlichung der ersten ZigBee Spezifikation.\\
-	\hline
 	4 & 2006 & Veröffentlichung einer zweiten ZigBee Spezifikation.\\
-	\hline
 	5 & 2007 & Einführung von ZigBee PRO, mit erweiterter Funktionalität.\\
-	\hline
 	6 & 2015 & Auffinden einer gravierenden Sicherheitslücke, welche Angreifern den kompletten Zugriff auf ZigBee Geräte ermöglicht.\\
-	\hline
 \end{tabular}
 \par
 \begin{multicols}{3}
@@ -112,7 +102,7 @@ Gründer und offizieller Entwickler der ZigBee Spezifikation ist die sogenannte 
 %\end{FigureFullWidth}
 %\begin{multicols}{3}
 
-Die einzelnen Kategorien unterscheiden sich in der Art und Weise, in wie weit bei Entwicklungsentscheidungen sowie Entscheidungen über organisatorische Angelegenheiten der Allianz mitbestimmt werden darf. Adopter, Participant und Promoter erhalten in aufsteigender Reihenfolge immer höhere Mitspracherechte. Allerdings steigen die Beiträge des Mitgliedes ebenso für jeden Kategorieanstieg.~\cite{zigbee.11} Weitere Details zu den genaueren Abstufungen und Beiträgen der einzelnen Kategorien sind auf der offiziellen ZigBee Webseite zu erfahren.
+Die einzelnen Kategorien unterscheiden sich in der Art und Weise, inwieweit bei Entwicklungsentscheidungen sowie Entscheidungen über organisatorische Angelegenheiten der Allianz mitbestimmt werden darf. Adopter, Participant und Promoter erhalten in aufsteigender Reihenfolge immer höhere Mitspracherechte. Allerdings steigen die Beiträge des Mitgliedes ebenso für jeden Kategorieanstieg.~\cite{zigbee.11} Weitere Details zu den genaueren Abstufungen und Beiträgen der einzelnen Kategorien sind auf der offiziellen ZigBee Webseite zu erfahren.
 \par Da der ZigBee Standard als eine globale und offene Spezifikation entwickelt wurde, ist der Einsatz dieser Technologie in nahezu allen Endgeräten möglich. Von der ZigBee-Alliance  geprüfte Geräte werden allerdings mit einem Gütesiegel ausgestattet, um die korrekte Implementierung des Standards zu garantieren und somit die Kompatibilität zu anderen Geräten sicherzustellen. Ein Beispiel hierfür ist die HUE Serie von Philips, welche aus fernsteuerbaren LED-Lampen besteht.
 \begin{Figure}
 \includegraphics[width=\linewidth]{Kapitel/ZigBee/Grafiken/hue.png}

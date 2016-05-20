@@ -1,7 +1,7 @@
 \begin{multicols}{3}[\section{IEEE 802.11 Basics}]
 
-\rhead{Autor: Jan Selig}
-\lfoot{Letzte Bearbeitung: 11.04.2016}
+\rhead{Jan Selig, Simon Retzmann}
+\lfoot{16.05.2016}
 
 \newrefsegment
 
@@ -9,15 +9,12 @@
 \begin{tabular}{p{2,1 cm}p{2.7 cm}}
 \textbf{Steckbrief}& \\
 \end{tabular}
-\begin{tabular}{p{2,1 cm}|p{2.7 cm}}
+\rowcolors{1}{\topicolor!20}{}
+\begin{tabular}{p{2,1 cm}p{2.7 cm}}
       Einsatz seit & 1997\\
-      \hline
       Frequenz"-bereich  & \SI{2.4}{\giga\hertz}, \SI{5}{\giga\hertz} \\
-      \hline
       Datenrate & \SI{2}{Mbit/s} - \SI{54}{Mbit/s}\\
-      \hline
-       Verbreitung & Weltweit\\
-      \hline
+      Verbreitung & Weltweit\\
       Reichweite & ca. \SI{20}{\metre}\\
 \end{tabular}
 \end{boxedminipage}
@@ -34,7 +31,7 @@ Der reine 802.11 Standard ist veraltet und wird in der Praxis nicht mehr verwend
 
 \subsection*{Technische Erläuterungen}
 \subsubsection*{Architekturen}  
-Es sind im Standard 802.11 grundsätzlich drei verschiedene Architekturen vorgesehen, wie ein drahtloses Netzwerk aufgebaut werden kann. Diese sind in Abbildung  \ref{fig:IEEE802.Architektur} dargestellt. Der Regelfall ist die Anbindung von Kommunikationsgeräten über einen sogenannten Access Point oder auch Basisstation genannt. Dieser AP stellt eine Schnittstelle zwischen kabellosen Kommunikationsgeräten und einem bestehenden lokalen Netzwerk dar. Die zweite Architektur beschreibt den Aufbau eines Netzwerkes mit mehreren Kommunikationsgeräten ohne den Einsatz von AP’s. Hierbei wird ein sogenanntes Ad-Hock-Netzwerk aufgebaut, bei dem alle Kommunikationsgeräte untereinander drahtlos verbunden sind. Die letzte Architektur sieht eine Richtfunkstrecke über eine maximale Distanz von 10 Kilometern vor. ~\cite{basics.3}
+Es sind im Standard 802.11 grundsätzlich drei verschiedene Architekturen vorgesehen, wie ein drahtloses Netzwerk aufgebaut werden kann. Diese sind in Abbildung  \ref{fig:IEEE802.Architektur} dargestellt. Der Regelfall ist die Anbindung von Kommunikationsgeräten über einen sogenannten Access Point (AP) oder auch Basisstation genannt. Dieser AP stellt eine Schnittstelle zwischen kabellosen Kommunikationsgeräten und einem bestehenden lokalen Netzwerk dar. Die zweite Architektur beschreibt den Aufbau eines Netzwerkes mit mehreren Kommunikationsgeräten ohne den Einsatz von AP’s. Hierbei wird ein sogenanntes Ad-Hock-Netzwerk aufgebaut, bei dem alle Kommunikationsgeräte untereinander drahtlos verbunden sind. Die letzte Architektur sieht eine Richtfunkstrecke über eine maximale Distanz von 10 Kilometern vor. ~\cite{basics.3}
 \begin{Figure}
 \includegraphics[width=\linewidth]{Kapitel/IEEE802.11/Grafiken/80211_Architektur.jpg}
 \captionof{figure}{IEEE 802.11 Architektur~\cite{basics.5}}
@@ -61,7 +58,7 @@ In den Abbildugen \ref{fig:IEEE802.Frequenzbereich} und \ref{fig:IEEE802.Frequen
 \end{Figure}
 
 \subsubsection*{Übertragungstechnik}
-Da ein drahtloses Netzwerk grundsätzlich ein Broadcast Medium ist, kann es bei gleichzeitigen Übertragungen zu sogenannten Kollisionen kommen. Mit Kollisionen ist eine Überlagerung der Funksignale gemeint. Um diese Kollisionen zu vermindern, gibt es ein bestimmtes Zugriffsverfahren, das als Carrier Sense Multiple Access bezeichnet wird. CSMA sieht vor, dass jeder Kommunikationsteilnehmer vor dem Senden prüfen muss, ob das Übertragungsmedium frei ist. 
+Da ein drahtloses Netzwerk grundsätzlich ein Broadcastmedium ist, kann es bei gleichzeitigen Übertragungen zu sogenannten Kollisionen kommen. Mit Kollisionen ist eine Überlagerung der Funksignale gemeint. Um diese Kollisionen zu vermindern, gibt es ein bestimmtes Zugriffsverfahren, das als Carrier Sense Multiple Access bezeichnet wird. CSMA sieht vor, dass jeder Kommunikationsteilnehmer vor dem Senden prüfen muss, ob das Übertragungsmedium frei ist. 
 
 Zur Übertragung von Signalen wird die Spread-Spectrum-Technologie verwendet. Spread Spectrum Systeme können Distanzen von ca. 250 Metern überbrücken. Je größer die Entfernung zwischen Kommunikationsgerät und AP, desto kleiner der Durchsatz. Die Funktionsweise ist hierbei wie folgt: Die zu übertragende Information wird vom Sender über mehrere Kanäle verteilt. Die Wahl der Kanäle folgt einem zufälligen Muster. Es gibt zwei Varianten zur Nutzung des Spread Spectrums, die im Standard 802.11 definiert sind:
 
@@ -78,42 +75,30 @@ arbeitet mit einer festen, aber wählbaren Frequenz. Es stehen insgesamt 14 Kana
 ~\cite{basics.4}
 
 
-\subsection*{Einsatz}
-Für drahtlose Netzwerke gibt es zahlreiche Anwendungszwecke, von denen an dieser Stelle nur einige genannt werden:
-\begin{itemize}
-	\item Drahtlose Netzwerke ermöglichen eine hohe Mobilität
-	\item Drahtlose Netzwerke bieten  eine Ergänzung zum 				kabelgebundenen Ethernet und ermöglichen zum Beispiel in Firmen  die mobile Nutzung der Arbeitsrechner
-	\item Mobile Geräte können einfach, ohne Verkabelung und unabhängig vom Ort via Funk miteinander vernetzt werden
-	\item Drahtlose Netzwerke können bei schwierigen Verkabelungsverhältnissen eingesetzt werden wie z.B. Denkmalschutz eines Gebäudes~\cite{basics.8}
-\end{itemize}
-
 \subsection*{Sicherheit}
 
 Da kabellose Übertragungen Broadcast-Verbindungen sind, bieten diese einfach ausnutzbare Sicherheitslücken. Um dies zu verhindern enthält der 802.11 Standard ein Verschlüsselungsschema namens Wired Equivalent Privacy. WEP stellt hierfür Funktionen für die Authentifizierung und Verschlüsselung bereit.
-Jedoch bietet dieses Schema zu viele Schwachstellen und gilt seit 2001 als unsicher. Aus diesem Grund wurde es durch andere Schemata wie z.B. WiFi Protected Access und WiFi Protected Access 2 ersetzt.~\cite{basics.2}
+Jedoch bietet dieses Schema zu viele Schwachstellen und gilt seit 2001 als unsicher. Aus diesem Grund wurde es durch andere Schemata wie z.B. WiFi Protected Access und WiFi Protected Access 2 (WPA 2) ersetzt.~\cite{basics.2}
+\subsubsection*{Authentifizierungsmethoden}
+Für WPA2 sind zwei verschiedene Authentifizierungsmethoden entwickelt. Der Zugriff kann durch ein Passwort eingeschränkt werden, ist dieses Passwort allerdings anderen bekannt, dann ist sowohl der Zugriff als auch die Verschlüsselung unsicher. Für die Nutzer ist die Eingabe des Passwortes eventuell zu umständlich. Mit Wifi Protected Setup (WPS) wird per Knopfdruck das Endgerät authentifiziert. Dabei wird das Passwort an das Gerät übertragen. Für ein kurzes Zeitfenster öffnet sich damit die Möglichkeit das Passwort abzufangen, jedoch ist die Wahrscheinlichkeit dafür gering, da dieses Zeitfenster normalerweise für einen Angreifer unbekannt ist.
 
+Bei größeren Netzen mit vielen Nutzern empfiehlt sich eine  Authentifizierung mit Benutzername und Kennwort nach Protokoll IEEE 802.1x. An zentraler Stelle kann der Zugriff gemanaged werden. Häufig steht dies in dem Zusammenhang mit WPA2-Enterprise oder WPA2-Radius. 
+~\cite{basics.9,basics.11}
 \end{multicols}
 \newpage
 \section*{Historische Entwicklung}
 \includegraphics[width=\textwidth]{Kapitel/IEEE802.11/Grafiken/Zeitstrahl_2}
 \par
 \noindent
-\begin{tabular}{|p{1 cm}|p{3 cm}|p{13.55 cm}|}
-	\hline
+\rowcolors{2}{}{\topicolor!20}
+\begin{tabular}{p{1 cm}p{3 cm}p{13.55 cm}}
 	Nummer & Datum & Entwicklungsschritte~\cite{basics.1}\\
-	\hline
 	1 & 1997 &  Erstmalige Spezifizierung einer verbindlichen Luftschnittstelle für lokale Funknetzwerke. Dieser Standard wird als IEEE 802.11 bezeichnet und erlaubt Datenraten von bis zu 2 MBits/s brutto.\\
-	\hline
 	2 & 1999 & Erweiterung zum Standard IEEE 802.11b, der höhere Datenraten von bis zu 11 MBit/s brutto bietet und das gleiche Modulationsverfahren benutzt, wie sein Vorgänger.\\
-	\hline
 	3 & 1999 & Verabschiedung des Standards IEEE 802.11a. Dieser ermöglicht größere Datenraten von bis zu 54 MBits/s brutto, nutzt das 5Ghz Frequenzband und das orthogonale Frequenzmultiplexverfahren zur Modulation des Übertragungssignals. Dieses Verfahren war zu dieser Zeit jedoch  nur für das 5GHz Frequenzband freigegeben.\\
-	\hline
 	4 & 2002 & Erst 2002 mit der Einführung des Standards 802.11g war dieses Modulationsverfahren auch für das 2,4 GHz Frequenzband verfügbar. 802.11g bietet Datenraten von bis zu 54 MBit/s brutto. Des Weiteren bietet dieser Standard auch noch eine Möglichkeit zur Kompatibilität mit Geräten, die noch den 802.11b Standard nutzen.\\
-	\hline
 	5 & 2004 & Der Standard 802.11j basiert auf dem Standard 802.11a und stellt eine Erweiterung für den japanischen Markt dar.\\
-	\hline
 	6 & 2006 & Der Standard 802.11h basiert ebenfalls auf dem Standard 802.11a und ist für den Betrieb mit großen Sendeleistungen gedacht.\\
-	\hline
 \end{tabular}
 \par
 \begin{multicols}{3}
@@ -125,13 +110,25 @@ Jedoch bietet dieses Schema zu viele Schwachstellen und gilt seit 2001 als unsic
 %\captionof{figure}{DHBW-Startseitenbild~\cite{vorlage.9}}
 %\end{FigureFullWidth}
 %\begin{multicols}{3}
+\subsection*{Einsatz}
+Für drahtlose Netzwerke gibt es zahlreiche Anwendungszwecke, von denen an dieser Stelle nur einige genannt werden:
+\begin{itemize}
+	\item Drahtlose Netzwerke ermöglichen eine hohe Mobilität
+	\item Drahtlose Netzwerke bieten  eine Ergänzung zum 				kabelgebundenen Ethernet und ermöglichen zum Beispiel in Firmen  die mobile Nutzung der Arbeitsrechner
+	\item Mobile Geräte können einfach, ohne Verkabelung und unabhängig vom Ort via Funk miteinander vernetzt werden
+	\item Drahtlose Netzwerke können bei schwierigen Verkabelungsverhältnissen eingesetzt werden wie z.B. Denkmalschutz eines Gebäudes~\cite{basics.8}
+\end{itemize}
 
 \subsection*{Anbieter und Gremien}
 IEEE 802.11 bezeichnet einen von „Institute of Electrical and Electronics Engineers“ definierten Standard für drahtlose Netzwerke auf Basis von Ethernet. IEEE ist ein internationaler Berufsverband von Informationstechnikern, die unter anderem technische Standards spezifizieren. Einer der bekanntesten Standards ist der Standard 802.3, der die Netzwerkschnittstelle Ethernet spezifiziert.
 
 \subsection*{Ausblick}
 Mit dem Standard IEEE 802.11ac wurden bereits 2014 drahtlose Hochgeschwindigkeitsnetze spezifiziert, die eine Datenübertragungsrate von 600 Mbit/s ermöglichen. Weiterführend wäre zum Beispiel eine Technik, die Daten nicht per Funk, sondern per Licht optisch überträgt, wie die in Entwicklung befindliche Technik LiFi.
-Ein weiterer Schritt in die Zukunft wird meiner Meinung nach jedoch nicht nur die Entwicklung von Technologien zur höheren Datenübertragung in drahtlosen Netzwerken sein, sondern eine vollständige Abstraktion von kabelgebundenen Medien. Dazu zählt die Verbindung von AP's zu Routern, kabelgebundene Verbindungen von Netzwerkkomponenten zu anderen Komponenten, aber auch beispielsweise HDMI- oder USB-Kabel.
+Ein weiterer Schritt in die Zukunft wird nach Herrn Seligs Meinung  nach jedoch nicht nur die Entwicklung von Technologien zur höheren Datenübertragung in drahtlosen Netzwerken sein, sondern eine vollständige Abstraktion von kabelgebundenen Medien. Dazu zählt die Verbindung von AP's zu Routern, kabelgebundene Verbindungen von Netzwerkkomponenten zu anderen Komponenten, aber auch beispielsweise HDMI- oder USB-Kabel.
+
+\subsubsection*{Öffentliche WLAN-Netzwerke}
+Auch im öffentlichen Raum verbreitet sich der Standard weiter. Immer mehr öffentliche WLAN-Netzwerke entstehen zur Vernetzung, Benutzer können mit ihren Endgeräten an vielen Stellen ins Internet. In Deutschland stand häufig für die Betreiber öffentlicher WLAN-Netzwerke das Problem der Störerhaftung im Weg. Seit 2010 gilt nach Urteil des Bundesgerichtshofes das Prinzip, dass der Betreiber für mögliche Vergehen seiner Nutzer haftbar gemacht werden kann und riskiert damit mindestens eine Abmahnung. Die Bundesregierung plant einen neuen Gesetzesentwurf der den Betreibern mehr Rechtssicherheit beschaffen soll. In Zukunft ist es in Deutschland also möglich, dass mehr öffentliche WLAN-Netzwerke zur freien Verfügung stehen.
+~\cite{basics.10}
 
 \printbibliography[segment=13,heading=subbibliography]
 
