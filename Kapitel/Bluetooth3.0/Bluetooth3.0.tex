@@ -55,22 +55,6 @@ Da Bluetooth das \SI{2,4}{\giga\hertz} Frequenzband nicht alleine verwendet, son
 
 Um mehrere \textit{Bluetooth} Verbindungen (Piconetze) zu garantieren, verwendet jedes Piconetz eine unterschiedliche Hopping-Sequenz. Im \SI{2,4}{\giga\hertz} Frequenzband können 79 Känale angeboten werden~\cite{bluetooth3.0.3}.
 
-\subsubsection*{Klassen und Reichweite}
-Bluetooth wurde hauptsächlich für portable Handhelds konzipiert, weshalb der Standard drei verschiedene Sendeleistungen spezifiziert. Entsprechend werden Endgeräte den einzelnen Leistungsklassen zugewiesen. Mobiltelefone sind beispielsweise der Leistungsklasse 3 zugeordnet~\cite{bluetooth3.0.5}. \\
-
-\noindent
-\begin{boxedminipage}{\linewidth}
-\begin{tabular}{p{1,3cm} | p{1,5cm} | p{1,5cm}}
-      \textbf{Klasse} & \textbf{Max. Leistung} & \textbf{Reichweite} \\
-      \hline
-      Klasse 1 & 100 mW & ca. 100m \\
-      \hline
-      Klasse 2 & 2,5 mW & ca. 50m \\
-      \hline
-      Klasse 3 & 1 mW & ca. 10m \\
-\end{tabular}
-\end{boxedminipage}
-
 \subsubsection*{Piconetze}
 Unter einem Piconetz versteht man eine Menge von miteinander kommunizierenden \textit{Bluetooth}-Geräten. Verknüpft man Piconetze über \textit{Bluetooth}-Geräte, können diese zu einem sogenannten Scatternetz zusammengefasst werden (siehe Abb. \ref{fig:Piconetze})~\cite{bluetooth3.0.3}.
 
@@ -109,6 +93,10 @@ Für den Aufbau, Erhalt und dem korrekten Abbau von Verbindungen ist der Link Co
 
 Der Link Manager ist für die Einrichtung und Aufrechterhaltung von Verbindungen zuständig. Dazu wird das Link Manager Protocol (\textbf{LMP}) eingesetzt, welches ebenfalls Sicherheit, Identifikation und Verbindungskontrolle garantieren soll~\cite{bluetooth3.0.3}.
 
+Mit dem Host Controller Interface (\textbf{HCI}) verfolgt man das Ziel, Endgeräte und Bluetooth Chips physikalisch voneinander zu trennen. Zu seiner Aufgabe zählt es, Daten und Kommandos für den Link Manager in definierten Kommandos und Nachrichtenpaketen zwischen Endgerät und Bluetooth Chip (Controller) zu übertragen~\cite{bluetooth3.0.1}.
+
+Das Logical Link Control und Adaption Protocol (\textbf{L2CAP}) unterscheidet Protokolle von höheren Ebenen (z.B. RFCOMM, BNEP und SDP) und kann mehrere Verbindungen zu einem Gerät über eine physikalische ACL Verbindung multiplexen (siehe Abb. \ref{fig:l2cap}). Durch die Erweiterung des L2CAP in der \textit{Bluetooth} Spezifikation 3.0 war es nun möglich den High Speed Kanal zu nutzen~\cite{bluetooth3.0.1}.
+
 \end{multicols}
 
 \section*{Historische Entwicklung}
@@ -131,10 +119,6 @@ Der Link Manager ist für die Einrichtung und Aufrechterhaltung von Verbindungen
 \end{tabular}
 \par
 \begin{multicols}{3}
-
-Mit dem Host Controller Interface (\textbf{HCI}) verfolgt man das Ziel, Endgeräte und Bluetooth Chips physikalisch voneinander zu trennen. Zu seiner Aufgabe zählt es, Daten und Kommandos für den Link Manager in definierten Kommandos und Nachrichtenpaketen zwischen Endgerät und Bluetooth Chip (Controller) zu übertragen~\cite{bluetooth3.0.1}.
-
-Das Logical Link Control und Adaption Protocol (\textbf{L2CAP}) unterscheidet Protokolle von höheren Ebenen (z.B. RFCOMM, BNEP und SDP) und kann mehrere Verbindungen zu einem Gerät über eine physikalische ACL Verbindung multiplexen (siehe Abb. \ref{fig:l2cap}). Durch die Erweiterung des L2CAP in der \textit{Bluetooth} Spezifikation 3.0 war es nun möglich den High Speed Kanal zu nutzen~\cite{bluetooth3.0.1}.
 
 \begin{Figure}
 \includegraphics[width=\linewidth]{Kapitel/Bluetooth3.0/Grafiken/l2cap.png}
