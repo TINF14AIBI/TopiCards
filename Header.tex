@@ -40,9 +40,6 @@
 % no header separation line
 \renewcommand{\headrule}{}
 
-%Itemize-Umgebung:
-\setitemize{leftmargin=8.5pt,topsep=0pt,itemsep=0pt,partopsep=0pt,parsep=0pt} 
-
 %Seitenränder:
 \setlength{\topmargin}{-15mm}
 %\setlength{\headsep}{4mm}
@@ -106,11 +103,11 @@
 \addbibresource{./Kapitel/WiMAX/WiMAXBib}
 \addbibresource{./Kapitel/Z-Wave/Z-Wave}
 
-\title{Drahtlose Netzwerke}
-\subtitle{TopiCards der ersten Rotation}
-\author{Kurs TINF14AIBI}
 \begin{document}
-\maketitle
+\input{Vorwort.tex}
+%Itemize-Umgebung:
+\setitemize{leftmargin=8.5pt,topsep=0pt,itemsep=0pt,partopsep=0pt,parsep=0pt} 
+
 \newpage
 \tableofcontents
 \newpage
