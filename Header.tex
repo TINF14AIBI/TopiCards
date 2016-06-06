@@ -15,6 +15,7 @@
 \usepackage{multicol}
 \usepackage{enumitem} 
 \usepackage[font=footnotesize]{caption}
+\usepackage{pdfpages} 
 
 \definecolor{iot}{HTML}{33EE99}
 \definecolor{access}{HTML}{3399EE}
@@ -104,10 +105,9 @@
 \addbibresource{./Kapitel/Z-Wave/Z-Wave}
 
 \begin{document}
+\includepdf{deckblatt.pdf}
 \input{Vorwort.tex}
 %Itemize-Umgebung:
 \setitemize{leftmargin=8.5pt,topsep=0pt,itemsep=0pt,partopsep=0pt,parsep=0pt} 
 
-\newpage
-\tableofcontents
-\newpage
+\includepdf{inhaltsverzeichnis.pdf}
